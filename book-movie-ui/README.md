@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-## Just Cinemas UI
+## Book Movie UI
 
 To run your project  
 ```yarn start```
@@ -23,10 +23,4 @@ To add a dependency to your project
     2. Change the git url to the forked git hub url.
     3. Change the deploy job script - ```sh ./buildAndDeploy/deploy.sh team1-bootcamp-march2018``` to ```sh ./buildAndDeploy/deploy.sh <yourteam-theevent>```. Ensure you don't use capital letters. S3 buckets don't like capital letters.  
     4. The API URL appearing in the build job, can only be provided when the API project is built and deployed. Once you have deployed the API project, get the IP of the api and change it here.
-    
-* Team members:
-1) Mishu Goyal
-2) Prachi Gupta
-3) Sahana
-4) Alekhya Yalla
-5) Harshitha 
+

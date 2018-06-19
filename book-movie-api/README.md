@@ -3,7 +3,7 @@
 https://medium.com/@readsethu/jooq-flyway-spring-boot-and-gradle-44a8d3f289#.noa8xg74v
 
 
-# Just Cinemas API
+# Book Movie API
 
 To build locally run  
 ```./gradlew clean build```
@@ -28,14 +28,7 @@ Once the postgres instance is running run
 4. Then follow the instruction on the https://github.com/Sethuraman/bootcamp-gocdinfra to complete the deployment
 5. You can test your API deployment by running the below command
 ```curl <your deployed ip address>/movies/now-showing``` If this print out json then your deployment has worked. Be aware, that the curl endpoint might take a while before it works. Track the API deployment via the cloudformation console. 
-5. Get the IP address of the EC2 box created to host your API and provide update in the build stage of the UI project build. You can test 
-Team members- 
-1) Mishu Goyal
-2) Rajshri Singh
-3) Prachi Gupta
-4) Alekhya Yalla
-5) Harshitha
-6) Sahana Nagaraja
+5. Get the IP address of the EC2 box created to host your API and provide update in the build stage of the UI project build. You can test
 
 
 
