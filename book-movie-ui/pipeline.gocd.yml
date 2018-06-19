@@ -1,0 +1,40 @@
+format_version: 2
+environments:
+  ci:
+    pipelines:
+      - "einsteam-ui"
+      
+pipelines:
+  "einsteam-ui":
+    group: team1
+    materials:
+      ui:
+        git: "git@github.com:tw-exten-pathashala-1/einsteam-bootcamp-just-cinemas-ui.git"
+    stages:
+      - test:
+          jobs:
+            test:
+              resources:
+                - node-and-java
+              tasks:
+                - script: |
+                    yarn install
+                    yarn run test_with_coverage
+      - build:
+          jobs:
+            build:
+              resources:
+                - node-and-java
+              tasks:
+                - script: |
+                    yarn install
+                    REACT_APP_API_URL="http://34.236.246.113:9090" yarn run build              
+
+      - deploy:
+           jobs:
+            deploy:
+              resources:
+                - node-and-java
+              tasks:
+                - script: |
+                    sh ./buildAndDeploy/deploy.sh einsteam-paatshala-mar2018                    

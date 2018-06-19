@@ -1,0 +1,30 @@
+format_version: 2
+environments:
+  ci:
+    pipelines:
+      - "team-einsteam-api"
+      
+pipelines:
+  "team-einsteam-api":
+    group: team1
+    materials:
+      api:
+        git: "git@github.com:tw-exten-pathashala-1/einsteam-bootcamp-just-cinemas-api.git"
+    stages:
+      - buildAndTest:
+          jobs:
+            test:
+              resources:
+                - node-and-java
+              tasks:
+                - script: |
+                    buildAndDeploy/build/build.sh team-einsteam-api
+
+      - deploy:
+           jobs:
+            deploy:
+              resources:
+                - node-and-java
+              tasks:
+                - script: |
+                    buildAndDeploy/deploy/deploy.sh team-einsteam-api paatshala-key-pair
